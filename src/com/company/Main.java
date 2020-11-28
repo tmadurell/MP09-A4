@@ -81,7 +81,6 @@ public class Main {
                 System.out.println(textamagat);
                 txt = true;
                 break;
-
             } catch (Exception ex){
                 System.out.println(line + ": No es la contrasenya no es correcta."+ "\n" + ex );
                 line = bufferedReader.readLine();
