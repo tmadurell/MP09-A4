@@ -75,13 +75,15 @@ public class Main {
                 SecretKey key = E2ClausXifrar.passwordKeyGeneration(line,256);
                 byte [] decryptedText = E2ClausXifrar.decryptData(key, fitxer);
                 String textamagat = new String(decryptedText);
+                System.out.println(line + ": Es la contrasenya es correcta. ");
+                System.out.println(" ");
+                System.out.println("Aquest es el resultat del seu textamagat desxifrat: ");
                 System.out.println(textamagat);
-                System.out.println("La contrasenya es correcte: " + line);
                 txt = true;
                 break;
 
             } catch (Exception ex){
-                System.out.println("La contrasenya no es correcte: "+ line + " "+ ex);
+                System.out.println(line + ": No es la contrasenya no es correcta."+ "\n" + ex );
                 line = bufferedReader.readLine();
             }
 
